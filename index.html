@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曼德勃罗集控制</title>
+    <style>
+      body, html { margin: 0; padding: 0; overflow: hidden; }  
+  #controls { position: absolute; top: 10px; left: 10px; }  
+  canvas { display: block; margin: 0 auto; }  
+</style>
+  </head>
+  <body>
+    <div id="controls">
+      <label for="iterations">迭代次数:</label>
+      <input type="number" id="iterations" min="1" value="100">
+      <label for="scale">缩放:</label>
+      <input type="number" id="scale" min="0.1" value="1" step="0.1">
+      <label for="xOffset">X平移:</label>
+      <input type="number" id="xOffset" min="-2" value="0" step="0.1">
+      <label for="yOffset">Y平移:</label>
+      <input type="number" id="yOffset" min="-2" value="0" step="0.1">
+      <button id="drawButton">绘制</button>
+    </div>
+    <canvas id="mandelbrotCanvas"></canvas>
+    <script src="mandelbrot.js">
+    </script>
+  </body>
+</html>
