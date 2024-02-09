@@ -50,6 +50,15 @@ document.getElementById('drawButton')
       drawMandelbrot(iterations, scale, xOffset, yOffset);
     }
   });
-
-// 初始绘制  
 drawMandelbrot(100, 1, 0, 0);
+
+function captureScreenshot() {
+  const canvas = document.getElementById('mandelbrotCanvas');
+  const imageURL = canvas.toDataURL('image/png');
+  const downloadLink = document.createElement('a');
+  downloadLink.href = imageURL;
+  downloadLink.download = 'mandelbrot_screenshot.png';
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+}
