@@ -50,7 +50,7 @@ document.getElementById('drawButton')
       drawMandelbrot(iterations, scale, xOffset, yOffset);
     }
   });
-drawMandelbrot(100, 1, 0, 0);
+drawMandelbrot(100, 0.1, 0, 0);
 
 function captureScreenshot() {
   const canvas = document.getElementById('mandelbrotCanvas');
